@@ -13,7 +13,7 @@ public class Problem2 {
 
         int k = sc.nextInt();
 
-        // Step 1: Check remainder condition
+        
         int rem = arr[0] % k;
 
         for (int i = 1; i < n; i++) {
@@ -23,19 +23,19 @@ public class Problem2 {
             }
         }
 
-        // Step 2: Convert to steps
+        
         int[] b = new int[n];
         for (int i = 0; i < n; i++) {
             b[i] = (arr[i] - rem) / k;
         }
 
-        // Step 3: Sort
+        
         Arrays.sort(b);
 
-        // Step 4: Find median
+        
         int median = b[n / 2];
 
-        // Step 5: Count operations
+        
         int operations = 0;
         for (int i = 0; i < n; i++) {
             operations += Math.abs(b[i] - median);
